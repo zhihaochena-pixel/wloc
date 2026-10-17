@@ -1,12 +1,5 @@
 {
-  "type": "module",
-  "scripts": {
-    "dev": "npx wrangler dev",
-    "deploy": "npx wrangler deploy --minify",
-    "pages:dev": "npx wrangler pages dev --port 8787 -c wrangler.pages.jsonc",
-    "pages:deploy": "npx wrangler pages deploy -c wrangler.pages.jsonc"
-  },
-  "dependencies": {
-    "hono": "^4.10.6"
-  }
+ "name":"wloc-self-hosted","private":true,"type":"module",
+ "scripts":{"test":"node --test test/*.test.js","dev":"wrangler dev","build":"wrangler deploy --dry-run --outdir build","build:pages":"wrangler pages functions build functions --outdir build/pages","deploy":"wrangler deploy","deploy:pages":"wrangler pages deploy dist --config wrangler.pages.jsonc"},
+ "devDependencies":{"wrangler":"^4.0.0"}
 }
