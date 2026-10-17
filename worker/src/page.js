@@ -518,10 +518,11 @@ function parseMapUrl(text) {
   return null;
 }
 
-function parseUrl() {
+async function parseUrl() {
   const input = document.getElementById('urlInput').value.trim();
   if (!input) return toast(t('paste_first'));
-  const result = parseMapUrl(input);
+  let result;
+  try { const r = await fetch("/api/parse?url="+encodeURIComponent(input)); const d=await r.json(); if(d.success) result={lat:d.latitude,lon:d.longitude}; } catch {}
   if (!result) { toast(t('parse_failed'), 3000); return; }
   moveTo(result.lat, result.lon, 15);
   toast(t('parsed', result.lon, result.lat));

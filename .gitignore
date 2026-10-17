@@ -1,6 +1,7 @@
 node_modules/
-src/
-package.json
-package-lock.json
-rollup.config.js
+.wrangler/
+.dev.vars
+.env*
+!.env.example
 .DS_Store
+worker/build/

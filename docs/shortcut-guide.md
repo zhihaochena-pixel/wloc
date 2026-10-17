@@ -1,3 +1,5 @@
+> Updated deployment and Shortcut migration: [self-hosting.md](self-hosting.md). Do not paste only wloc-worker.js: use the complete project for /api/parse.
+
 # WLOC 定位修改 - 指南
 
 **简体中文** · [English](shortcut-guide.en.md)
@@ -50,7 +52,7 @@ cd worker
 npx wrangler deploy
 ```
 
-或在 CF Dashboard → Workers → 新建 Worker → 粘贴 `wloc-worker.js` → 部署。
+使用完整项目入口 `src/index.js`；不要仅粘贴旧页面文件。
 
 无需 KV、数据库或环境变量。
 

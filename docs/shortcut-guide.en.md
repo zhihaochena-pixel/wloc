@@ -1,3 +1,5 @@
+> Updated deployment and Shortcut migration: [self-hosting.md](self-hosting.md). Do not paste only wloc-worker.js: use the complete project for /api/parse.
+
 # WLOC Location Spoofer - Guide
 
 [简体中文](shortcut-guide.md) · **English**
